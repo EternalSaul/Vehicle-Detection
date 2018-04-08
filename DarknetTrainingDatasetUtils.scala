@@ -40,12 +40,12 @@ object DarknetTrainingDatasetUtils {
 
   private def WriteResult2TargetFile(file: File, x: Seq[String], i: Int) = {
     val target = File.apply(s"$TARGET_DIRECTORY${file.name.substring(0, 9)}img${getOrder(i)}.txt")
-    if (!target.exists) {
+//    if (!target.exists) {
       target.createFile()
-      val writer = target.writer(true, "UTF-8")
+      val writer = target.writer(false, "UTF-8")
       x.foreach(writer.write(_))
       writer.flush()
-    }
+//    }
 
   }
 
@@ -75,7 +75,7 @@ object DarknetTrainingDatasetUtils {
     List("left", "top", "width", "height").
       map(x.attribute(_).map(_.text.toFloat)).
       map(_.get) match {
-      case List(a, b, c, d) => (a / wi, b / hi, math.min(1, c / wi), math.min(1, d / hi)) match {
+      case List(a, b, c, d) => ((a+c/2) / wi, (b+d/2) / hi, math.min(1, c / wi), math.min(1, d / hi)) match {
         case (x1, y1, x2, y2) => s"$x1 $y1 $x2 $y2"
       }
     }
@@ -83,10 +83,10 @@ object DarknetTrainingDatasetUtils {
 
   private def map2CarType(x: Node) = {
     x.attributes("vehicle_type").text match {
-      case "car" => "1"
-      case "van" => "2"
-      case "bus" => "3"
-      case "others" => "4"
+      case "car" => "0"
+      case "van" => "1"
+      case "bus" => "2"
+      case "others" => "3"
     }
   }
 
