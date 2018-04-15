@@ -14,7 +14,7 @@
 
 ![平均损失值](https://raw.githubusercontent.com/EternalSaul/Vehicle-Detection/master/img/QQ图片20180408234638.png)
 
-200次迭代平均iou
+每个周期迭代平均iou
 
 ![100次迭代的IOU平均值](https://raw.githubusercontent.com/EternalSaul/Vehicle-Detection/master/img/QQ图片20180408234741.png)
 
@@ -22,7 +22,7 @@
 
 </div>
 
-UADTRAC-TrainSet：
+UADETRAC-TrainSet：
 
 |      | car            | van            | bus            | others        |
 | ---- | -------------- | -------------- | -------------- | ------------- |
@@ -33,6 +33,21 @@ UADTRAC-TrainSet：
 训练样本实例
 
 ![训练样本实例](https://raw.githubusercontent.com/EternalSaul/Vehicle-Detection/master/img/QQ图片20180409000739.png)
+
+
+
+ua-detrac训练之后的模型检测效果（class置信度0.4）：
+
+![adetract-tes](https://raw.githubusercontent.com/EternalSaul/Vehicle-Detection/master/img/uadetract-test.png)
+
+COCO训练的检测效果（class置信度0.4）：
+
+![coco-tes](https://raw.githubusercontent.com/EternalSaul/Vehicle-Detection/master/img/coco-test.png)
+
+VOC训练的检测效果（class置信度0.4）：
+
+![oc-tes](https://raw.githubusercontent.com/EternalSaul/Vehicle-Detection/master/img/voc-test.png)
+
 </div>
 
 
