@@ -1,0 +1,5 @@
+classes=1
+train=single_train.txt
+valid=data/nc.txt
+names=data/obj_single.names
+backup=left/
