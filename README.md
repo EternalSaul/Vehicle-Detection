@@ -52,7 +52,7 @@ The model I trained is not good enough.This is PR curve of my detector with othe
 
 
 
-Yolo is very Fast!Yolo v2 detector achive 54 FPS on GTX1070,and Yolo v3 detector achive 29.4 FPS because it uses a deeper network to achive higher mAP on test benchmark.And Yolo v2 and v3 detector can achive 16 an 6.9 FPS separately on GTX860Ti.
+Yolo is very Fast!Yolo v2 detector achive 54 FPS on GTX1070,and Yolo v3 detector achive 29.4 FPS because it uses a deeper network to achive higher mAP on test benchmark.And Yolo v2 and v3 detector can achive 16 an 6.9 FPS separately on GTX860m.
 
 
 
